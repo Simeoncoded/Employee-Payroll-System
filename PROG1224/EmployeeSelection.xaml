@@ -1,0 +1,375 @@
+﻿<Page
+    x:Class="PROG1224.EmployeeSelection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:PROG1224"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid>
+        <ListView
+            x:Name="empList"
+            Margin="711,54,76,198"
+            SelectionChanged="empList_SelectionChanged" />
+        <ComboBox
+            x:Name="cboEmpType"
+            Width="289"
+            Height="44"
+            Margin="42,28,0,0"
+            SelectionChanged="cboEmpType_SelectionChanged">
+            <ComboBoxItem Content="All" IsSelected="True" />
+            <ComboBoxItem Content="Hourly" />
+            <ComboBoxItem Content="Salary" />
+            <ComboBoxItem Content="SalesPerson" />
+        </ComboBox>
+        <TextBox
+            x:Name="empTxtSelect"
+            Width="289"
+            Height="41"
+            Margin="42,77,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Search by Name or Sin"
+            Text=""
+            TextChanged="empTxtSelect_TextChanged"
+            TextWrapping="Wrap" />
+        <DatePicker
+            x:Name="empStart"
+            Height="37"
+            Margin="42,122,0,0"
+            VerticalAlignment="Top"
+            DateChanged="empStart_DateChanged" />
+        <TextBox
+            x:Name="txtFirstname"
+            Width="289"
+            Height="36"
+            Margin="47,215,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Firstname"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtLastname"
+            Width="289"
+            Height="36"
+            Margin="339,215,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Lastname"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtSin"
+            Width="289"
+            Height="41"
+            Margin="47,280,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="SIN number"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtHourlyRate"
+            Width="289"
+            Height="41"
+            Margin="344,280,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Hourly Rate"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtCommissionRate"
+            Width="289"
+            Height="41"
+            Margin="47,348,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Commission rate"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtSalary"
+            Width="289"
+            Height="43"
+            Margin="348,346,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Salary"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblFname"
+            Width="111"
+            Margin="42,191,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Firstname"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblLastname"
+            Width="111"
+            Margin="344,191,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Lastname"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblCmRate"
+            Width="111"
+            Margin="49,325,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Commission"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblSalary"
+            Width="111"
+            Margin="344,328,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Salary"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblSin"
+            Width="111"
+            Margin="47,256,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Sin Number"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblHourlyRate"
+            Width="111"
+            Margin="344,260,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Hourly Rate"
+            TextWrapping="Wrap" />
+        <Button
+            x:Name="btnChange"
+            Width="207"
+            Margin="244,457,0,0"
+            VerticalAlignment="Top"
+            Click="btnChange_Click"
+            Content="Update" />
+        <TextBox
+            x:Name="txtHoursWorked"
+            Width="288"
+            Margin="48,420,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Hours Worked"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblCmRate_Copy"
+            Width="111"
+            Margin="47,394,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Hours Worked"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblAddNewEmp"
+            Width="225"
+            Margin="244,500,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="18"
+            FontWeight="Bold"
+            Text="Add New Employee Here"
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtNewFirstName"
+            Width="289"
+            Height="41"
+            Margin="42,588,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Firstname"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtNewLastName"
+            Width="289"
+            Height="41"
+            Margin="336,588,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Lastname"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtNewSin"
+            Width="289"
+            Height="41"
+            Margin="42,658,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="SIN Number"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtNewHourlyRate"
+            Width="289"
+            Height="41"
+            Margin="344,658,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Hourly Rate"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtNewCommission"
+            Width="289"
+            Height="41"
+            Margin="43,728,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Commission"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtNewSalary"
+            Width="289"
+            Height="41"
+            Margin="347,727,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Salary"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtNewHoursWorked"
+            Width="289"
+            Height="41"
+            Margin="43,798,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Hours Worked"
+            Text=""
+            TextWrapping="Wrap" />
+        <Button
+            x:Name="btnAdd"
+            Width="207"
+            Margin="246,844,0,0"
+            VerticalAlignment="Top"
+            Click="btnAdd_Click"
+            Content="Add Employee" />
+        <TextBlock
+            x:Name="lblNewFname"
+            Width="111"
+            Margin="43,565,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Firstname"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblNewLastname"
+            Width="111"
+            Margin="339,568,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Lastname"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblNewSin1"
+            Width="111"
+            Margin="42,634,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="SIN Number"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblNewHourlyRate1"
+            Width="111"
+            Margin="344,634,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Hourly Rate"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblNewCommission"
+            Width="111"
+            Margin="42,704,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Commision"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblNewSalary"
+            Width="111"
+            Margin="347,708,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Salary"
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblNewHoursWorked"
+            Width="111"
+            Margin="42,774,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Hours Worked"
+            TextWrapping="Wrap" />
+        <ComboBox
+            x:Name="cboNewEmployeeType"
+            Width="583"
+            Margin="47,529,0,0"
+            PlaceholderText="Select Employee Type to add here">
+            <ComboBoxItem Content="Hourly" />
+            <ComboBoxItem Content="Salary" />
+            <ComboBoxItem Content="SalesPerson" />
+        </ComboBox>
+        <TextBox
+            x:Name="txtNewSalesAmt"
+            Width="289"
+            Height="41"
+            Margin="352,797,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Sales Amount"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblNewSales"
+            Width="111"
+            Margin="352,778,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Sales Amount"
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="txtSalesAmt"
+            Width="282"
+            Margin="348,420,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            PlaceholderText="Sales Amount"
+            Text=""
+            TextWrapping="Wrap" />
+        <TextBlock
+            x:Name="lblSalesAmt"
+            Width="111"
+            Margin="348,398,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Sales Amount"
+            TextWrapping="Wrap" />
+        <HyperlinkButton
+            Margin="424,113,0,0"
+            VerticalAlignment="Top"
+            Click="HyperlinkButton_Click"
+            Content="Click Here to Access the PayrollInfo Page" />
+        <DatePicker
+            x:Name="txtNewDateStarted"
+            Margin="687,844,0,0"
+            VerticalAlignment="Top"
+            Visibility="Collapsed" />
+
+    </Grid>
+</Page>
